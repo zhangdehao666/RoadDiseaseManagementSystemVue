@@ -60,7 +60,7 @@ export const getRequest=(url,params)=>{
     return axios({
         method:'get',
         url:`${base}${url}`,
-        data:params
+        data :params
     })
 }
 

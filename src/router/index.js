@@ -1,11 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Login from "../views/Login";
-import System from "../views/System";
-import Info from "../views/project/Info";
-import Location from "../views/line/Location"
-import Parameter from "../views/line/Parameter"
-import Radar from "../views/line/Radar"
+import Project from "../views/Project";
+import DetectInfo from "../views/DetectInfo";
+import Detection from "../views/Detection";
+import Setting from "../views/Setting";
 
 Vue.use(VueRouter)
 
@@ -16,28 +15,24 @@ const routes = [
         component: Login
     },
     {
-        path: '/system',
-        name: 'System',
-        component: System,
-        children:[
-            {
-                path: '/project-info',
-                name: 'Info',
-                component: Info
-            },{
-                path: '/line-location',
-                name: 'Location',
-                component: Location
-            },{
-                path: '/line-parameter',
-                name: 'Parameter',
-                component: Parameter
-            },{
-                path: '/line-radar',
-                name: 'Radar',
-                component: Radar
-            }
-        ]
+        path: '/project',
+        name: 'Project',
+        component: Project
+    },
+    {
+        path: '/setting',
+        name: 'Setting',
+        component: Setting,
+    },
+    {
+        path: '/detection',
+        name: 'Detection',
+        component: Detection,
+    },
+    {
+        path: '/detectInfo',
+        name: 'DetectInfo',
+        component: DetectInfo
     },
 ]
 
